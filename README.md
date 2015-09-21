@@ -23,13 +23,13 @@ $ gem install rails-labeled_log
 ```ruby
 require 'rails-labeled_log'
 
-# Include Rails::LabeledLog::Logging module in your class:
+# Include Rails::LabeledLog::Logging module in your class
 module FakeModule
   class FakeClass
     include Rails::LabeledLog::Logging
 
     def do_something
-      # Log some info here:
+      # Log some info here
       log_info 'I did something'
     end
   end
@@ -38,17 +38,17 @@ end
 fake = FakeModule::FakeClass.new
 fake.do_something
 
-# Rails log will be labeled with the class name:
-# [FakeModule::FakeClass] I did something at 2015-09-21 00:33:17 -0300
-
-# You also can use class methods:
+# You also can use class methods
 FakeModule::FakeClass.log_error 'Something was wrong'
-
-# In the Rails Log:
-# [FakeModule::FakeClass] Something was wrong at 2015-09-21 01:01:43 -0300
 ```
 
-#### Available (private) instance methods and class methods
+Rails log will be labeled with the class name:
+```
+[FakeModule::FakeClass] I did something at 2015-09-21 00:33:17 -0300
+[FakeModule::FakeClass] Something was wrong at 2015-09-21 00:33:18 -0300
+```
+
+##### Available (private) instance methods and class methods
 - log_info
 - log_error
 - log_warn
@@ -58,14 +58,17 @@ FakeModule::FakeClass.log_error 'Something was wrong'
 ### Rails::LabeledLog::Logger class
 
 ```ruby
+require 'rails-labeled_log'
+
 logger = Rails::LabeledLog::Logger.new('One', 'Two')
 logger.info 'My info message'
-
-# In the Rails Log:
-# [One] [Two] My info message at 2015-09-21 01:01:43 -0300
+```
+In the Rails Log:
+```
+[One] [Two] My info message at 2015-09-21 01:01:43 -0300
 ```
 
-#### Available methods
+##### Available methods
 - info
 - error
 - warn
