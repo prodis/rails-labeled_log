@@ -73,7 +73,8 @@ A tool to use easily Rails Tagged Logging in your Ruby classes.
 - fatal
 
 ## Author
-- [Fernando Hamasaki de Amorim (prodis)](http://prodis.blog.br)
+[Fernando Hamasaki de Amorim (prodis)](http://prodis.blog.br)
+
 ![Prodis Logo](http://prodis.net.br/images/prodis_150.gif)
 
 
