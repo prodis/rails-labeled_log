@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe Rails::LabeledLog::Logger do
   subject { described_class.new('Chefe', 'Pixel') }
 

@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 module FakeModule
   class FakeClass
     include Rails::LabeledLog::Logging

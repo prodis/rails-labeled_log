@@ -1,6 +1,6 @@
-require 'rails-labeled_log'
 require 'coveralls'
 require 'rails'
+require 'rails-labeled_log'
 
 Coveralls.wear!
 

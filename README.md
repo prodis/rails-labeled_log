@@ -81,6 +81,7 @@ In the Rails Log:
 - debug
 - fatal
 
+
 ## Author
 [Fernando Hamasaki de Amorim (prodis)](http://prodis.blog.br)
 
