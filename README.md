@@ -1,11 +1,11 @@
 # Rails Labeled Log
 A tool to use easily Rails Tagged Logging in your Ruby classes.
 
-[![Gem Version](https://badge.fury.io/rb/rails-labeled_log.png)](http://badge.fury.io/rb/rails-labeled_log)
-[![Build Status](https://travis-ci.org/prodis/rails-labeled_log.png?branch=master)](https://travis-ci.org/prodis/rails-labeled_log)
-[![Coverage Status](https://coveralls.io/repos/prodis/rails-labeled_log/badge.png)](https://coveralls.io/r/prodis/rails-labeled_log)
-[![Code Climate](https://codeclimate.com/github/prodis/rails-labeled_log.png)](https://codeclimate.com/github/prodis/rails-labeled_log)
-[![Dependency Status](https://gemnasium.com/prodis/rails-labeled_log.png)](https://gemnasium.com/prodis/rails-labeled_log)
+[![Gem Version](https://badge.fury.io/rb/rails-labeled_log.svg)](http://badge.fury.io/rb/rails-labeled_log)
+[![Build Status](https://travis-ci.org/prodis/rails-labeled_log.svg?branch=master)](https://travis-ci.org/prodis/rails-labeled_log)
+[![Coverage Status](https://coveralls.io/repos/prodis/rails-labeled_log/badge.svg?branch=master&service=github)](https://coveralls.io/github/prodis/rails-labeled_log?branch=master)
+[![Code Climate](https://codeclimate.com/github/prodis/rails-labeled_log/badges/gpa.svg)](https://codeclimate.com/github/prodis/rails-labeled_log)
+[![Dependency Status](https://gemnasium.com/prodis/rails-labeled_log.svg)](https://gemnasium.com/prodis/rails-labeled_log)
 
 ## Installing
 
