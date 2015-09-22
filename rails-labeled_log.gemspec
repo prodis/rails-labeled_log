@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version       = Rails::LabeledLog::VERSION
   spec.author        = 'Prodis a.k.a. Fernando Hamasaki de Amorim'
   spec.email         = 'prodis@gmail.com'
-  spec.summary       = 'A tool to use easily Rails Tagged Logging in your Ruby classes.'
+  spec.summary       = 'A tool to use Rails Tagged Logging easily in your Ruby classes.'
   spec.description   = spec.summary
   spec.homepage      = 'https://github.com/prodis/rails-labeled_log'
   spec.license       = 'MIT'
@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.platform              = Gem::Platform::RUBY
+  spec.platform = Gem::Platform::RUBY
   spec.required_ruby_version = '>= 2.0.0'
 
   spec.add_runtime_dependency 'rails', '>= 3.2'

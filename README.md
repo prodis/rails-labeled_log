@@ -1,5 +1,5 @@
 # Rails Labeled Log
-A tool to use easily Rails Tagged Logging in your Ruby classes.
+A tool to use Rails Tagged Logging easily in your Ruby classes.
 
 [![Gem Version](https://badge.fury.io/rb/rails-labeled_log.svg)](http://badge.fury.io/rb/rails-labeled_log)
 [![Build Status](https://travis-ci.org/prodis/rails-labeled_log.svg?branch=master)](https://travis-ci.org/prodis/rails-labeled_log)
