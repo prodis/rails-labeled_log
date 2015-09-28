@@ -8,15 +8,15 @@ module Rails
       end
 
       LabeledLog::LEVELS.each do |level|
-        define_method(level) do |message|
-          log(level, message)
+        define_method(level) do |message, *additional_labels|
+          log(level, message, additional_labels)
         end
       end
 
       private
 
-      def log(level, message)
-        Rails.logger.tagged(*labels) do
+      def log(level, message, *additional_labels)
+        Rails.logger.tagged(*(labels + additional_labels)) do
           Rails.logger.send(level, format_message(message))
         end
       end

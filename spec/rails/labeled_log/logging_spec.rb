@@ -25,6 +25,17 @@ describe Rails::LabeledLog::Logging do
         end
       end
     end
+
+    context 'when supplies additional labels' do
+      Rails::LabeledLog::LEVELS.each do |level|
+        describe "#log_#{level}" do
+          it 'logs with class name and additional labels' do
+            subject.send("log_#{level}", "Message for #{level} in class methods", 'NewLabel')
+            expect(@log_stream.string).to include("[FakeModule::FakeClass] [NewLabel] Message for #{level} in class methods at ")
+          end
+        end
+      end
+    end
   end
 
   context 'instance methods' do
@@ -35,6 +46,17 @@ describe Rails::LabeledLog::Logging do
         it 'logs with class name' do
           subject.send("log_#{level}", "Message for #{level} in instance methods")
           expect(@log_stream.string).to include("[FakeModule::FakeClass] Message for #{level} in instance methods at ")
+        end
+      end
+    end
+
+    context 'when supplies additional labels' do
+      Rails::LabeledLog::LEVELS.each do |level|
+        describe "#log_#{level}" do
+          it 'logs with class name and additional labels' do
+            subject.send("log_#{level}", "Message for #{level} in class methods", 'NewLabel')
+            expect(@log_stream.string).to include("[FakeModule::FakeClass] [NewLabel] Message for #{level} in class methods at ")
+          end
         end
       end
     end

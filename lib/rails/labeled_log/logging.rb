@@ -8,15 +8,15 @@ module Rails
 
       module ClassMethods
         Rails::LabeledLog::LEVELS.each do |level|
-          define_method("log_#{level}".to_sym) do |message|
-            log_labeled(level, message)
+          define_method("log_#{level}".to_sym) do |message, *additional_labels|
+            log_labeled(level, message, additional_labels)
           end
         end
 
         private
 
-        def log_labeled(level, message)
-          Rails::LabeledLog::Logger.new(self.name).send(level, message)
+        def log_labeled(level, message, *additional_labels)
+          Rails::LabeledLog::Logger.new(self.name).send(level, message, additional_labels)
         end
       end
 
@@ -31,8 +31,8 @@ module Rails
         private
 
         Rails::LabeledLog::LEVELS.each do |level|
-          define_method("log_#{level}".to_sym) do |message|
-            logger.send(level, message)
+          define_method("log_#{level}".to_sym) do |message, *additional_labels|
+            logger.send(level, message, additional_labels)
           end
         end
       end

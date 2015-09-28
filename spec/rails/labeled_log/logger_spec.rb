@@ -18,4 +18,15 @@ describe Rails::LabeledLog::Logger do
       end
     end
   end
+
+  context 'when supplies additional labels' do
+    Rails::LabeledLog::LEVELS.each do |level|
+      describe "##{level}" do
+        it 'logs with labels and additional labels' do
+          subject.send(level, "Message for #{level}", 'Nina', 'Doki')
+          expect(@log_stream.string).to include("[Chefe] [Pixel] [Nina] [Doki] Message for #{level} at ")
+        end
+      end
+    end
+  end
 end
