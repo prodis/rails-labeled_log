@@ -7,6 +7,7 @@ A tool to use Rails Tagged Logging easily in your Ruby classes.
 [![Code Climate](https://codeclimate.com/github/prodis/rails-labeled_log/badges/gpa.svg)](https://codeclimate.com/github/prodis/rails-labeled_log)
 [![Dependency Status](https://gemnasium.com/prodis/rails-labeled_log.svg)](https://gemnasium.com/prodis/rails-labeled_log)
 
+
 ## Installing
 
 ### Gemfile
@@ -46,12 +47,16 @@ fake.do_something
 
 # You also can use class methods
 FakeModule::FakeClass.log_error 'Something was wrong'
+
+# Optionally, you can supply additional labels for all log methods
+FakeModule::FakeClass.log_warn 'Pay attention!', 'Warning'
 ```
 
 Rails log will be labeled with the class name:
 ```
 [FakeModule::FakeClass] I did something at 2015-09-21 00:33:17 -0300
 [FakeModule::FakeClass] Something was wrong at 2015-09-21 00:33:18 -0300
+[FakeModule::FakeClass] [Warning] Pay attention! at 2015-09-21 00:33:19 -0300
 ```
 
 ##### Available (private) instance methods and class methods
@@ -68,10 +73,13 @@ require 'rails-labeled_log'
 
 logger = Rails::LabeledLog::Logger.new('One', 'Two')
 logger.info 'My info message'
+logger.info 'My info message', 'Three', 'Four'
 ```
+
 In the Rails Log:
 ```
 [One] [Two] My info message at 2015-09-21 01:01:43 -0300
+[One] [Two] [Three] [Four] My info message at 2015-09-21 01:01:44 -0300
 ```
 
 ##### Available methods
