@@ -52,7 +52,7 @@ FakeModule::FakeClass.log_error 'Something was wrong'
 FakeModule::FakeClass.log_warn 'Pay attention!', 'Warning'
 ```
 
-Rails log will be labeled with the class name:
+Rails log will be labeled with the class name (and optinal additional labels):
 ```
 [FakeModule::FakeClass] I did something at 2015-09-21 00:33:17 -0300
 [FakeModule::FakeClass] Something was wrong at 2015-09-21 00:33:18 -0300
